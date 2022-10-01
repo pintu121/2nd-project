@@ -9,7 +9,7 @@ RUN yum install -y httpd \
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/heustonn.zip /var/www/html
 WORKDIR /var/www/html
 RUN unzip heustonn.zip
-RUN cp -rvf heustonn/* .
-RUN rm -rf heustonn heustonn.zip
+RUN cp -rvf heustonn-html/* .
+RUN rm -rf heustonn-html heustonn.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
